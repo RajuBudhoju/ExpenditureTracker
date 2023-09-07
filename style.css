@@ -1,0 +1,147 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+}
+
+.balance h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.balance h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+}
+
+.transaction-form h2 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.transaction-form label {
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.transaction-form input[type="text"],
+.transaction-form input[type="number"] {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.2rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button#addTransaction {
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+button#addTransaction:hover {
+    background-color: #555;
+}
+
+.transaction-history {
+    background-color: #f5f5f5;
+    /* Light gray background color */
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.transaction-history h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.transaction-history .income,
+.transaction-history .expense {
+    margin-top: 1rem;
+}
+
+.transaction-history .list {
+    list-style: none;
+    padding: 0;
+}
+
+.transaction-history .list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #ccc;
+    align-items: center;
+}
+
+.transaction-history .list li.expense {
+    color: #d9534f;
+}
+
+.transaction-history .list li.income {
+    color: #5bc0de;
+}
+
+.delete-edit-btn-container {
+    display: flex;
+    align-items: center;
+}
+
+.delete-btn,
+.edit-btn {
+    background-color: transparent;
+    color: #333;
+    border: none;
+    border-radius: 50%;
+    padding: 0.3rem 0.6rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 0.5rem;
+}
+
+.delete-btn:hover,
+.edit-btn:hover {
+    background-color: #eee;
+}
+
+/* Add this CSS for the green remove button */
+.delete-btn.green {
+    background-color: #5cb85c;
+    /* Green color */
+    color: #fff;
+}
+
+.delete-btn.green:hover {
+    background-color: #449d44;
+    /* Darker green on hover */
+}
