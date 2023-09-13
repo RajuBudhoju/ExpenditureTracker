@@ -11,7 +11,15 @@ const transactions = JSON.parse(localStorage.getItem('transactions')) || [];
 
 // Function to update the local storage
 function updateLocalStorage() {
-    localStorage.setItem('transactions', JSON.stringify(transactions));
+    // localStorage.setItem('transactions', JSON.stringify(transactions));
+    axios.post("https://crudcrud.com/api/73074bce4b574e8197c823d7d0ba70cf/appintmentData", transactions)
+        .then((response) => {
+            showNewUserOnScreen(response.data);
+            console.log(response);
+        })
+        .catch((err) => {
+            console.log(err);
+        })
 }
 
 // Function to add a transaction
@@ -90,11 +98,6 @@ function addTransactionToDOM(transaction) {
     }
 }
 
-// ... rest of the code remains the same ...
-
-// ... rest of the code remains the same ...
-
-
 // Function to edit a transaction
 function editTransaction(id) {
     const transactionIndex = transactions.findIndex(transaction => transaction.id === id);
@@ -107,8 +110,6 @@ function editTransaction(id) {
         updateTransactionBtn.addEventListener('click', () => updateTransaction(id));
     }
 }
-
-// ... rest of the code remains the same ...
 
 // Function to update the balance, income, and expense
 function updateValues() {
@@ -150,8 +151,6 @@ function init() {
 // Event listeners
 addTransactionBtn.addEventListener('click', addTransaction);
 
-
-// ... previous JavaScript code ...
 
 // Variables for edit transaction
 const editTransactionForm = document.getElementById('editTransaction');
